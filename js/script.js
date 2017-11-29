@@ -1,11 +1,11 @@
 $(document).ready(function(){
     
     $('#submit').click(function( event ){
-        console.log('bouton');
+        
         apiKey = 'f00169735244915fda23496d28781fb1';
 
         var city = $("#city").val();
-        console.log(city);
+        
         if(city != ''){
             $.ajax({
                 
@@ -14,9 +14,9 @@ $(document).ready(function(){
                 type: "GET",
                 datatype: "jsonp",
                 success: function show(data){
-                    console.log(data);
+                    
                     var iconCode = data.list[0].weather[0].icon;
-                    console.log(iconCode);
+                    
                     var iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
                     $("#icon").html("<img src='" + iconUrl  + "'>");
                     $("#result").html('<div class="alert alert-info">La température à '+ city + ' est de '+data.list[0].main.temp+'°C.</div>');
