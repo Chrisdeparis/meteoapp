@@ -24,6 +24,10 @@ $(document).ready(function(){
                     $("#result").html('<div class="alert alert-info">La température à '+ city + ' est de '+data.list[0].main.temp+'°C.</div>');
                     // afficher la description
                     $("#description").html('<div class="alert alert-info">Description : '+data.list[0].weather[0].description+'</div>');
+                    $("#icon").show();
+                    $("#result").show();
+                    $("#description").show();
+
         
                 }
                 
@@ -34,6 +38,13 @@ $(document).ready(function(){
             // affiche l'erreur si input vide
             $("#error").html('<div class="alert alert-danger">Veuillez ajouter une ville</div>');
             
+        }
+    });
+    $('#city').on('keyup', function(e) {
+        if($('#city').val() == ""){
+            $("#icon").hide();
+            $("#result").hide();
+            $("#description").hide();
         }
     });
 });
