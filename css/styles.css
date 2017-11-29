@@ -1,0 +1,30 @@
+.green {
+    background-color: #1abc9c;
+}
+button {
+    background-color: #1abc9c; /* Green */
+    padding:6px 0 6px 0;
+	font:bold 13px Arial;
+	background:#f5f5f5;
+	color:#555;
+	border-radius:2px;
+	width:100px;
+    border:1px solid #ccc;
+    height: 36px;
+    cursor: pointer;
+    margin-top: 42px;
+    position: relative;
+    bottom: 2px;
+}
+
+input {
+    border:1px solid #ccc;
+    padding:6px 0 6px 0;
+    height: 36px; 
+}
+#icon{
+    margin-top: 50px;
+}
+#error {
+    margin-top: 50px;
+}
